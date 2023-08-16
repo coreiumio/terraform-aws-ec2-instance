@@ -15,6 +15,12 @@ variable "assign_eip_address" {
   description = "Assign an Elastic IP address to the instance"
   default     = true
 }
+variable "user_data_replace_on_change" {
+  type        = bool
+  description = "Trigger a destroy and recreate for every user_data change"
+  default     = true
+}
+
 
 variable "user_data" {
   type        = string
